@@ -1,0 +1,103 @@
+@Phuc Nguyen
+==========================================================
+$1-FOLDER STRUCTURE
+
+00_Data xlsx
+   - All data set, data frame, hierarchy, vertices in xlsx format
+
+01_Notebook
+   - Steps and explanations in notebook format. Choose a web browser application to read the notebooks
+
+03_Best-script
+|  - Scripts that work and are ready to be used!
+|  - The order of folders are not the order of figures in the devrev publication
+|  - When run my scripts, I advice you position your cursor at the first line and click "Run"/use the corresponding shortcut keys
+|  - No matter which script you want to run, I advice you to 
+| load all the packages first at ...\mapping analysis\03_Best-script\00_Data-Preprocessing\00_Script_Packages.R
+|
+|____ 00_Data-Preprocessing
+|        + A script for loading all necessary packages and 2 for preprocessing and binarizing data frames
+|
+|____ 00_FunCon
+|        + All functions and configuration scripts
+|
+|____ 01_Hierarchical-Edge-Bundling
+|        + 00_Run-script.R: the source script for all steps from preprocessing the data table to visualizing HEBs
+|        + 00_UserFriendly_MakeHEB.R: Make HEBs without much knowledge about coding
+|        
+|____ 03_Pie
+|        + Pie.R: run to produce pie chart
+|
+|____ 04_Delay
+|        + Delay.R: run to produce static delay plot in the manuscript
+|        + Delay - Stack.R: run to produce interactive delay plot in the shiny app
+|
+|____ 05_Interference
+|        Phuc's note: these are the most complicated plots that I have ever drawn on R. They are customized for every single case  
+|
+|____ 06_WorldMap
+|        + MakeWorldMap.R creates two kinds of maps, displaying either by articles or by entries. When you run the script, you will be asked to choose one
+|
+|____ 08_Distance_Score
+|____ 09_Citation
+|____ 10_DataSummary
+|____ 11_Age
+
+
+
+04_Results
+   - Plots
+   - Note: read the paragraph $2-Naming instructions before adding any object there!
+
+05_Descriptives
+   - Tables for descriptive analyses. 
+   - Side note: The HEB also requires some new tables but they will be save in 00_Data xlsx 
+
+==========================================================
+$2-NAMING INSTRUCTIONS
+
+Run scripts: 
+   - there is no specific rule. However, when multiple scripts in a folder, scripts could begin with a number indicating the order it should be ran
+Functions:
+   - R-files for functions start with initials "PN_"
+==========================================================
+$3-VERSIONS of R and Packages
+> sessionInfo()
+R version 4.3.0 (2023-04-21 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 11 x64 (build 22631)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
+
+time zone: Europe/Berlin
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] cowplot_1.1.1      scales_1.3.0       RColorBrewer_1.1-3 plotly_4.10.3      igraph_1.6.0       ggraph_2.1.0       writexl_1.4.2     
+ [8] reshape2_1.4.4     fastDummies_1.7.3  readxl_1.4.3       lubridate_1.9.3    forcats_1.0.0      stringr_1.5.1      purrr_1.0.1       
+[15] readr_2.1.4        tidyr_1.3.0        tibble_3.2.1       ggplot2_3.4.4      tidyverse_2.0.0    dplyr_1.1.2        rstudioapi_0.15.0 
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.4       xfun_0.41          htmlwidgets_1.6.4  ggrepel_0.9.4      tzdb_0.4.0         vctrs_0.6.2        tools_4.3.0       
+ [8] generics_0.1.3     fansi_1.0.4        pkgconfig_2.0.3    data.table_1.14.10 lifecycle_1.0.4    compiler_4.3.0     farver_2.1.1      
+[15] munsell_0.5.0      ggforce_0.4.1      graphlayouts_1.0.2 htmltools_0.5.7    yaml_2.3.8         lazyeval_0.2.2     pillar_1.9.0      
+[22] MASS_7.3-60        viridis_0.6.4      tidyselect_1.2.0   digest_0.6.33      stringi_1.8.3      polyclip_1.10-6    fastmap_1.1.1     
+[29] grid_4.3.0         colorspace_2.1-0   cli_3.6.1          magrittr_2.0.3     tidygraph_1.2.3    utf8_1.2.3         withr_2.5.2       
+[36] timechange_0.2.0   rmarkdown_2.25     httr_1.4.7         gridExtra_2.3      cellranger_1.1.0   hms_1.1.3          evaluate_0.23     
+[43] knitr_1.45         viridisLite_0.4.2  rlang_1.1.1        Rcpp_1.0.11        glue_1.6.2         tweenr_2.0.2       jsonlite_1.8.7    
+[50] R6_2.5.1           plyr_1.8.9   
+
+
+=======================================================
+$4-Q&A
+1. Where to find the libraries and packages?
+>>> ...\mapping_analysis\03_Best-script\00_Data-Preprocessing\00_Script_Packages.R
+2. What are the versions of the libaries when the scripts still worked?
+>>> see paragraph $3-Versions of R and packages
