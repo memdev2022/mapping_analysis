@@ -14,7 +14,7 @@ rm(list=ls())
 
 # Set up directory and paths
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-directory = getwd() %>% str_extract(pattern = '^(.*?)mapping analysis')
+directory = getwd() %>% str_extract(pattern = '^(.*?)mapping_analysis')
 
 # This script produces HEB with connections representing the trend of multiple entries
 {

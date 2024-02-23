@@ -13,7 +13,7 @@ rm(list = ls())
   library(ggbump)
 }
 
-directory = dirname(getSourceEditorContext()$path) %>% str_extract(pattern = "^(.*?)mapping analysis")
+directory = dirname(getSourceEditorContext()$path) %>% str_extract(pattern = "^(.*?)mapping_analysis")
 
 {
   data_path = file.path(directory,'00_Data xlsx/')
