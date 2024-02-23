@@ -14,7 +14,7 @@ if (interactive() ){
   
   # Set up directory and paths
   setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-  directory = getwd() %>% str_extract(pattern = '^(.*?)mapping analysis')
+  directory = getwd() %>% str_extract(pattern = '^(.*?)mapping_analysis')
   
   
   {

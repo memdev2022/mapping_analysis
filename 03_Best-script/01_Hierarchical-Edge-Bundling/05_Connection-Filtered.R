@@ -2,7 +2,7 @@
 # This script produces HEB with connections of individual selected entries 
 rm(list=ls())
 
-directory = dirname(getSourceEditorContext()$path) %>% str_extract(pattern = '^(.*?)mapping analysis')
+directory = dirname(getSourceEditorContext()$path) %>% str_extract(pattern = '^(.*?)mapping_analysis')
 {
   data_path = file.path(directory,'00_Data xlsx/')
   funcon_path = file.path(directory,'03_Best-script/00_FunCon/')
