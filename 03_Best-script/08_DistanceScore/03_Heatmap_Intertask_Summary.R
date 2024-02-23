@@ -1,11 +1,12 @@
 rm(list = ls())
 
-rm(list = ls())
+directory = dirname(getSourceEditorContext()$path) %>% str_extract(pattern = "^(.*?)mapping_analysis")
 {
-  data_path = '//mpib-berlin.mpg.de/FB-LIP/RHYME/STUDIES/COMIC/03_Main Study - Measurement/F_Analysis/LitReview visualization/Hierarchical Edge Bundling/03_Best-script/08_DistanceScore/01_Data xlsx/'  
-  script_path = '//mpib-berlin.mpg.de/FB-LIP/RHYME/STUDIES/COMIC/03_Main Study - Measurement/F_Analysis/LitReview visualization/Hierarchical Edge Bundling/03_Best-script/01_Hierarchical-Edge-Bundling/'
-  funcon_path = '//mpib-berlin.mpg.de/FB-LIP/RHYME/STUDIES/COMIC/03_Main Study - Measurement/F_Analysis/LitReview visualization/Hierarchical Edge Bundling/03_Best-script/00_FunCon/'
-  result_path = '//mpib-berlin.mpg.de/FB-LIP/RHYME/STUDIES/COMIC/03_Main Study - Measurement/F_Analysis/LitReview visualization/Hierarchical Edge Bundling/04_Results/'
+  data_path = file.path(directory,'00_Data xlsx/')
+  funcon_path = file.path(directory,'03_Best-script/00_FunCon/')
+  preprocessing_path = file.path(directory,'03_Best-script/00_Data-Preprocessing/')
+  result_path = file.path(directory,'04_Results/')
+  descriptives_path = file.path(directory,'05_Descriptives/')
 }
 
 {
@@ -16,7 +17,7 @@ rm(list = ls())
 }
 
 # Cosmetics
-{source(paste0(funcon_path, "PN_GetPalette.R"))}
+{source(file.path(funcon_path, "PN_GetPalette.R"))}
 
 ########################################################################################################################
 # STEP 1: extract new order of entries
